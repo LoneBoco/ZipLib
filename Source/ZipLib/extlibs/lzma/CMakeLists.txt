@@ -139,10 +139,13 @@ else()
         unix/XzIn.c
     )
 endif()
+
 # library
 add_library(lzma STATIC
     ${sources}
 )
+add_library(LibLZMA::LibLZMA ALIAS lzma)
+
 # properties
 if(WIN32)
     set(include_dir .)

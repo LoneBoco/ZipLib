@@ -27,6 +27,9 @@ set(sources
 add_library(zlib STATIC
     ${sources}
 )
+add_library(ZLIB::ZLIB ALIAS zlib)
+add_library(zlibstatic ALIAS zlib)
+
 # properties
 target_include_directories(zlib
     PUBLIC

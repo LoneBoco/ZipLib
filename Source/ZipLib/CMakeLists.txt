@@ -92,7 +92,7 @@ target_include_directories(ZipLib
 target_compile_features(ZipLib_Sample PRIVATE cxx_std_11)
 target_link_libraries(ZipLib
     PRIVATE
-        bzip2
-        lzma
-        zlib
+        BZip2::BZip2
+        LibLZMA::LibLZMA
+        ZLIB::ZLIB
 )

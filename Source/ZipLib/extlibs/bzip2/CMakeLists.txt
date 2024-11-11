@@ -15,6 +15,9 @@ set(sources
 add_library(bzip2 STATIC
     ${sources}
 )
+add_library(BZip2::BZip2 ALIAS bzip2)
+add_library(bz2_static ALIAS bzip2)
+
 #properties
 target_include_directories(bzip2
     PUBLIC
