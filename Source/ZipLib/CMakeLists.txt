@@ -89,7 +89,9 @@ target_include_directories(ZipLib
     PUBLIC
         .
 )
-target_compile_features(ZipLib_Sample PRIVATE cxx_std_11)
+if(BUILD_SAMPLE)
+    target_compile_features(ZipLib_Sample PRIVATE cxx_std_11)
+endif()
 target_link_libraries(ZipLib
     PRIVATE
         BZip2::BZip2
