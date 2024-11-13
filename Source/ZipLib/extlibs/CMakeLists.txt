@@ -1,5 +1,5 @@
 find_package(BZip2)
-find_package(LibLZMA)
+find_package(LibLZMA CONFIG)
 find_package(ZLIB)
 
 if(NOT BZip2_FOUND)
